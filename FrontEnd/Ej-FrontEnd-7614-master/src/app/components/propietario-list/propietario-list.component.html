@@ -1,0 +1,39 @@
+<div>
+    <br>
+    <br>
+    <h3><fa-icon class="fa-1x" [icon]="faListAlt"></fa-icon>&nbsp;&nbsp;Listado de Propietario</h3>
+    <br>    
+</div>
+<div>
+    <table class="table table-hover">
+        <thead class="bg-info">
+            <tr>
+                <th>N°</th>
+                <th>Cédula</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Número</th>
+                <th>
+                    <button [routerLink]="['/propietario/form']" class="btn btn-info" ><fa-icon [icon]="faPlus"></fa-icon>&nbsp;Agregar&nbsp;&nbsp;</button>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of propietarios; let i = index">
+                <td>{{i|masmas}}</td>
+                <td>{{item.Cedula}}</td>
+                <td>{{item.Nombres}}</td>
+                <td>{{item.Apellidos}}</td>
+                <td>{{item.N_Telefono}}</td>
+                <td>
+                    <button [routerLink]="['/propietario/card', item.idPropietario]" class="btn btn-sm btn-info" ><fa-icon [icon]="faEye"></fa-icon></button>                    
+                    <button [routerLink]="['/propietario/form', item.idPropietario]" class="btn btn-sm btn-warning" ><fa-icon [icon]="faPencilAlt"></fa-icon></button>
+                    <button (click)="delete(item)" class="btn btn-sm btn-danger" ><fa-icon [icon]="faTrash"></fa-icon></button>
+                </td>
+            </tr>
+    
+        </tbody>
+    
+    </table>
+</div>
+

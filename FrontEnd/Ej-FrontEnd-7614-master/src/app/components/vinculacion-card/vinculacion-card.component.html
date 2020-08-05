@@ -1,0 +1,63 @@
+<br><br>
+<div class="row justify-content-center">
+    <h3>{{vinculacion.nombre_proyecto | uppercase }}</h3>
+    <div class="justify-content-center bg-light p-3">
+        <div class="media">
+            <div class="media-left">
+                <fa-icon class="mr-3 fa-2x" [icon]='faFileAlt'></fa-icon>
+            </div>
+            <div class="media-body">
+                <small class="media-heading"><strong>Nombre del Proyecto</strong></small>
+                <p class="h6">{{vinculacion.nombre_proyecto}}</p>
+            </div>
+        </div> 
+    
+        <div class="media">
+            <div class="media-left">
+                <fa-icon class="mr-3 fa-2x" [icon]='faHashtag'></fa-icon>
+            </div>
+            <div class="media-body">
+                <small class="media-heading"><strong>Código del Proyecto</strong></small>
+                <p class="h6">{{vinculacion.codigo_proyecto }}</p>
+            </div>
+        </div> 
+        
+        <div class="media">
+            <div class="media-left">
+                <fa-icon class="mr-3 fa-2x" [icon]='faBriefcase'></fa-icon>
+            </div>
+            <div class="media-body">
+                <small class="media-heading"><strong>Entidad Beneficiaria</strong></small>
+                <p class="h6">{{vinculacion.entidad_beneficiaria }}</p>
+            </div>
+        </div>
+        
+        <div class="media">
+            <div class="media-left">
+                <fa-icon class="mr-3 fa-2x" [icon]='faUserTie'></fa-icon>
+            </div>
+            <div class="media-body">
+                <small class="media-heading"><strong>Nombre del Coordinador</strong></small>
+                <p class="h6">{{vinculacion.nombre_coordinador }}</p>
+            </div>
+        </div>
+        
+        <div class="media">
+            <div class="media-left">
+                <fa-icon class="mr-3 fa-2x" [icon]='faUser'></fa-icon>
+            </div>
+            <div class="media-body">
+                <small class="media-heading"><strong>Nombre del Estudiante</strong></small>
+                <p class="h6">{{vinculacion.nombre_estudiante }}</p>
+            </div>
+        </div>
+        
+        <br>
+        <div class="row justify-content-center">
+            <button [routerLink]="['/vinculacion/list']" class="btn btn-info container" ><fa-icon [icon]="faListAlt"></fa-icon>&nbsp;Volver</button>    
+        </div>       
+    </div>
+    <br><br>
+</div>
+
+    

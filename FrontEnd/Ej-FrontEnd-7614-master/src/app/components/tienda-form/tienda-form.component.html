@@ -1,0 +1,73 @@
+<div class="text-center">
+    <br>
+    <br>
+    <h3><fa-icon class="fa-1x" [icon]="faUserPlus"></fa-icon>&nbsp;&nbsp;{{title}}</h3>
+    <br>    
+</div>
+<div class="row justify-content-center">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="user">
+        <div class="card-body" > 
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><fa-icon [icon]='faFileAlt'></fa-icon></span>
+                </div>
+                <input formControlName="Nombre" type="text" class="form-control form-control-user" 
+                    [(ngModel)]="tienda.Nombre" 
+                    [ngClass]="{'is-invalid': submitted && f.Nombre.errors}" placeholder="Nombre" />
+                <div *ngIf="submitted && f.Nombre.errors" class="invalid-feedback">
+                    <div *ngIf="f.Nombre.errors.required">El nombre es requerido</div>
+                </div>
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><fa-icon [icon]='faBriefcase'></fa-icon></span>
+                </div>
+                <input formControlName="R_Social" type="text" class="form-control form-control-user" 
+                    [(ngModel)]="tienda.R_Social" placeholder="Razón Social" />
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><fa-icon [icon]='faBriefcase'></fa-icon></span>
+                </div>
+                <input formControlName="N_Telefono" type="text" class="form-control form-control-user" 
+                    [(ngModel)]="tienda.N_Telefono" placeholder="Número" />
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><fa-icon [icon]='faBriefcase'></fa-icon></span>
+                </div>
+                <input formControlName="Direccion" type="text" class="form-control form-control-user" 
+                    [(ngModel)]="tienda.Direccion" placeholder="Dirección" />
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><fa-icon [icon]='faBriefcase'></fa-icon></span>
+                </div>
+                <input formControlName="Estado" type="text" class="form-control form-control-user" 
+                    [(ngModel)]="tienda.Estado" placeholder="Estado" />
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><fa-icon [icon]='faBriefcase'></fa-icon></span>
+                </div>
+                <input formControlName="Horario" type="text" class="form-control form-control-user" 
+                    [(ngModel)]="tienda.Horario" placeholder="Horario" />
+            </div>
+
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="btn-group ">
+                <button type="submit" class="btn btn-success">
+                    <fa-icon [icon]='faSave'></fa-icon>&nbsp;Guardar
+                </button>
+                <button type="reset" (click)="onReset()" class="btn btn-danger">
+                    <fa-icon [icon]='faTimes'></fa-icon>&nbsp;Cancelar
+                </button>
+            </div>
+        </div>        
+    </form>
+</div>

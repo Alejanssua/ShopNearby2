@@ -1,0 +1,69 @@
+<div class="text-center">
+    <br>
+    <br>
+    <h3><fa-icon class="fa-1x" [icon]="faUserPlus"></fa-icon>&nbsp;&nbsp;{{title}}</h3>
+    <br>    
+</div>
+<div class="row justify-content-center">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="user">
+        <div class="card-body" > 
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><fa-icon [icon]='faFileAlt'></fa-icon></span>
+                </div>
+                <input formControlName="nombre_proyecto" type="text" class="form-control form-control-user" 
+                    [(ngModel)]="vinculacion.nombre_proyecto" 
+                    [ngClass]="{'is-invalid': submitted && f.nombre_proyecto.errors}" placeholder="Nombre del Proyecto" />
+                <div *ngIf="submitted && f.nombre_proyecto.errors" class="invalid-feedback">
+                    <div *ngIf="f.nombre_proyecto.errors.required">El nombre del proyecto es requerido</div>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><fa-icon [icon]='faHashtag'></fa-icon></span>
+                </div>
+                <input formControlName="codigo_proyecto" type="text" class="form-control form-control-user" [(ngModel)]="vinculacion.codigo_proyecto" 
+                    [ngClass]="{'is-invalid': submitted && f.codigo_proyecto.errors}" 
+                    placeholder="Código del Proyecto" />
+    
+                <div *ngIf="submitted && f.codigo_proyecto.errors" class="invalid-feedback">
+                    <div *ngIf="f.codigo_proyecto.errors.required">El código del proyecto es requerido</div>
+                    <div *ngIf="f.codigo_proyecto.errors.minlength">La código del proyecto debe tener mínimo 4 numeros</div>
+                </div>
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><fa-icon [icon]='faBriefcase'></fa-icon></span>
+                </div>
+                <input formControlName="entidad_beneficiaria" type="text" class="form-control form-control-user" 
+                    [(ngModel)]="vinculacion.entidad_beneficiaria" placeholder="Entidad Beneficiaria" />
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><fa-icon [icon]='faUserTie'></fa-icon></span>
+                </div>
+                <input formControlName="nombre_coordinador" type="text" class="form-control form-control-user" 
+                    [(ngModel)]="vinculacion.nombre_coordinador" placeholder="Nombre del Coordinador" />
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><fa-icon [icon]='faUser'></fa-icon></span>
+                </div>
+                <input formControlName="nombre_estudiante" type="text" class="form-control form-control-user" 
+                    [(ngModel)]="vinculacion.nombre_estudiante" placeholder="Nombre del Estudiante" />
+            </div>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="btn-group ">
+                <button type="submit" class="btn btn-success">
+                    <fa-icon [icon]='faSave'></fa-icon>&nbsp;Guardar
+                </button>
+                <button type="reset" (click)="onReset()" class="btn btn-danger">
+                    <fa-icon [icon]='faTimes'></fa-icon>&nbsp;Cancelar
+                </button>
+            </div>
+        </div>        
+    </form>
+</div>

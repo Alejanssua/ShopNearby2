@@ -1,0 +1,53 @@
+<br><br>
+<div class="justify-content-center">
+    <h3>{{propietario.Nombres | uppercase }}</h3>
+    <div class="justify-content-center bg-light p-3">
+        <div class="media">
+            <div class="media-left">
+                <fa-icon class="mr-3 fa-2x" [icon]='faFileAlt'></fa-icon>
+            </div>
+            <div class="media-body">
+                <small class="media-heading"><strong>Nombres</strong></small>
+                <p class="h6">{{propietario.Nombres}}</p>
+            </div>
+        </div> 
+    
+        <div class="media">
+            <div class="media-left">
+                <fa-icon class="mr-3 fa-2x" [icon]='faBriefcase'></fa-icon>
+            </div>
+            <div class="media-body">
+                <small class="media-heading"><strong>Apellidos</strong></small>
+                <p class="h6">{{propietario.Apellidos }}</p>
+            </div>
+        </div>
+
+        <div class="media">
+            <div class="media-left">
+                <fa-icon class="mr-3 fa-2x" [icon]='faHashtag'></fa-icon>
+            </div>
+            <div class="media-body">
+                <small class="media-heading"><strong>Cedula</strong></small>
+                <p class="h6">{{propietario.Cedula }}</p>
+            </div>
+        </div> 
+        
+        <div class="media">
+            <div class="media-left">
+                <fa-icon class="mr-3 fa-2x" [icon]='faUserTie'></fa-icon>
+            </div>
+            <div class="media-body">
+                <small class="media-heading"><strong>Número</strong></small>
+                <p class="h6">{{propietario.N_Telefono }}</p>
+            </div>
+        </div>
+        
+        <br>
+        <div class="row justify-content-center">
+            <button [routerLink]="['/propietario/list']" class="btn btn-info container" ><fa-icon [icon]="faListAlt"></fa-icon>&nbsp;Volver</button>    
+        </div>       
+    </div>
+    <br><br>
+</div>
+
+    

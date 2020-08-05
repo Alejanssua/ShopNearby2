@@ -1,0 +1,41 @@
+<div>
+    <br>
+    <br>
+    <h3><fa-icon class="fa-1x" [icon]="faListAlt"></fa-icon>&nbsp;&nbsp;Listado de Vinculacion</h3>
+    <br>    
+</div>
+<div>
+    <table class="table table-hover">
+        <thead class="bg-info">
+            <tr>
+                <th>N°</th>
+                <th>Código del Proyecto</th>
+                <th>Nombre del Proyecto</th>
+                <th>Entidad Beneficiaria</th>
+                <th>Nombre del Coordinador</th>
+                <th>Nombre del Estudiante</th>
+                <th>
+                    <button [routerLink]="['/vinculacion/form']" class="btn btn-info" ><fa-icon [icon]="faPlus"></fa-icon>&nbsp;Agregar&nbsp;&nbsp;</button>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of vinculacions; let i = index">
+                <td>{{i|masmas}}</td>
+                <td>{{item.codigo_proyecto}}</td>
+                <td>{{item.nombre_proyecto}}</td>
+                <td>{{item.entidad_beneficiaria}}</td>
+                <td>{{item.nombre_coordinador}}</td>
+                <td>{{item.nombre_estudiante}}</td>
+                <td>
+                    <button [routerLink]="['/vinculacion/card', item.idvinculacion]" class="btn btn-sm btn-info" ><fa-icon [icon]="faEye"></fa-icon></button>                    
+                    <button [routerLink]="['/vinculacion/form', item.idvinculacion]" class="btn btn-sm btn-warning" ><fa-icon [icon]="faPencilAlt"></fa-icon></button>
+                    <button (click)="delete(item)" class="btn btn-sm btn-danger" ><fa-icon [icon]="faTrash"></fa-icon></button>
+                </td>
+            </tr>
+    
+        </tbody>
+    
+    </table>
+</div>
+

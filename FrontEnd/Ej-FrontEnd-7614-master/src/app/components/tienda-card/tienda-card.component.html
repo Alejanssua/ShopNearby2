@@ -1,0 +1,73 @@
+<br><br>
+<div class="justify-content-center">
+    <h3>{{tienda.Nombre | uppercase }}</h3>
+    <div class="justify-content-center bg-light p-3">
+        <div class="media">
+            <div class="media-left">
+                <fa-icon class="mr-3 fa-2x" [icon]='faFileAlt'></fa-icon>
+            </div>
+            <div class="media-body">
+                <small class="media-heading"><strong>Nombre</strong></small>
+                <p class="h6">{{tienda.Nombre}}</p>
+            </div>
+        </div> 
+    
+        <div class="media">
+            <div class="media-left">
+                <fa-icon class="mr-3 fa-2x" [icon]='faBriefcase'></fa-icon>
+            </div>
+            <div class="media-body">
+                <small class="media-heading"><strong>Razón Social</strong></small>
+                <p class="h6">{{tienda.R_Social }}</p>
+            </div>
+        </div>
+
+        <div class="media">
+            <div class="media-left">
+                <fa-icon class="mr-3 fa-2x" [icon]='faHashtag'></fa-icon>
+            </div>
+            <div class="media-body">
+                <small class="media-heading"><strong>Número</strong></small>
+                <p class="h6">{{tienda.N_Telefono }}</p>
+            </div>
+        </div> 
+        
+        <div class="media">
+            <div class="media-left">
+                <fa-icon class="mr-3 fa-2x" [icon]='faUserTie'></fa-icon>
+            </div>
+            <div class="media-body">
+                <small class="media-heading"><strong>Dirección</strong></small>
+                <p class="h6">{{tienda.Direccion }}</p>
+            </div>
+        </div>
+
+        <div class="media">
+            <div class="media-left">
+                <fa-icon class="mr-3 fa-2x" [icon]='faUserTie'></fa-icon>
+            </div>
+            <div class="media-body">
+                <small class="media-heading"><strong>Estado</strong></small>
+                <p class="h6">{{tienda.Estado }}</p>
+            </div>
+        </div>
+
+        <div class="media">
+            <div class="media-left">
+                <fa-icon class="mr-3 fa-2x" [icon]='faUserTie'></fa-icon>
+            </div>
+            <div class="media-body">
+                <small class="media-heading"><strong>Horario</strong></small>
+                <p class="h6">{{tienda.Horario }}</p>
+            </div>
+        </div>
+        
+        <br>
+        <div class="row justify-content-center">
+            <button [routerLink]="['/tienda/list']" class="btn btn-info container" ><fa-icon [icon]="faListAlt"></fa-icon>&nbsp;Volver</button>    
+        </div>       
+    </div>
+    <br><br>
+</div>
+
+    
