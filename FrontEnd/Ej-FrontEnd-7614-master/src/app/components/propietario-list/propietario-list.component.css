@@ -1,0 +1,22 @@
+.border{
+    border-radius: 30px;
+}
+
+tr td, th { 
+    border-top-right-radius: 0;               
+    border-top-left-radius: 0; 
+    border-bottom-left-radius: 0; 
+    border-bottom-right-radius: 0; 
+}
+th:first-child { 
+    border-top-left-radius: 30px; 
+}
+th:last-child {   
+    border-top-right-radius: 30px; 
+}
+tr:last-child td:first-child { 
+    border-bottom-left-radius: 30px; 
+}
+tr:last-child td:last-child { 
+    border-bottom-right-radius: 30px; 
+}

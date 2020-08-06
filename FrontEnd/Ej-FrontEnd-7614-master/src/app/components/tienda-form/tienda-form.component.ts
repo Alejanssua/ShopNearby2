@@ -3,7 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Tienda } from 'src/app/models/tienda';
 import { TiendaService } from 'src/app/services/tienda.service';
-import { faUser, faFileAlt, faHashtag, faBriefcase, faUserTie, faUserPlus, faSave, faTimes  } from '@fortawesome/free-solid-svg-icons';
+import { faListAlt, faClock, faGenderless, faMapMarkerAlt, faPhone, faStore, faIdCard, faUserPlus, faSave, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-tienda-form',
@@ -12,19 +12,21 @@ import { faUser, faFileAlt, faHashtag, faBriefcase, faUserTie, faUserPlus, faSav
 })
 export class TiendaFormComponent implements OnInit {
 
-  faUser = faUser;
-  faFileAlt = faFileAlt;
-  faHashtag  = faHashtag ;
-  faBriefcase = faBriefcase;
-  faUserTie = faUserTie;
-  faUserPlus =faUserPlus;
+  faListAlt = faListAlt;
+  faClock = faClock; 
+  faGenderless = faGenderless;
+  faMapMarkerAlt = faMapMarkerAlt;
+  faPhone = faPhone;
+  faStore = faStore;
+  faIdCard = faIdCard;
+  faUserPlus = faUserPlus; 
   faSave = faSave;
-  faTimes = faTimes;
+  faTimes = faTimes; 
 
   title = "Nuevo registro de tienda";
 
   tienda : Tienda = new Tienda();
-  
+
   @Output() flagToReload = new EventEmitter<Boolean>();
 
   form: FormGroup;

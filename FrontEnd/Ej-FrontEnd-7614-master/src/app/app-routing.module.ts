@@ -16,6 +16,7 @@ import { PropietarioFormComponent } from './components/propietario-form/propieta
 import { TiendaListComponent } from './components/tienda-list/tienda-list.component';
 import { TiendaCardComponent } from './components/tienda-card/tienda-card.component';
 import { TiendaFormComponent } from './components/tienda-form/tienda-form.component';
+import { InicioComponent } from './components/inicio/inicio.component';
 
 
 const routes: Routes = [
@@ -40,7 +41,8 @@ const routes: Routes = [
   {path: 'tienda/form', component: TiendaFormComponent},
   {path: 'tienda/form/:id', component: TiendaFormComponent},
   {path: 'tienda/list', component: TiendaListComponent},
-  {path: 'tienda/card/:id', component: TiendaCardComponent}
+  {path: 'tienda/card/:id', component: TiendaCardComponent},
+  {path: 'inicio', component: InicioComponent},
 ];
 
 @NgModule({

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Propietario } from 'src/app/models/propietario';
 import { PropietarioService } from 'src/app/services/propietario.service';
 import { ActivatedRoute } from '@angular/router';
-import { faListAlt, faUser, faFileAlt, faHashtag, faBriefcase, faUserTie  } from '@fortawesome/free-solid-svg-icons';
+import { faListAlt, faUser, faIdCard, faPhone  } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-propietario-card',
@@ -11,12 +11,10 @@ import { faListAlt, faUser, faFileAlt, faHashtag, faBriefcase, faUserTie  } from
 })
 export class PropietarioCardComponent implements OnInit {
 
-  faUser = faUser;
-  faFileAlt = faFileAlt;
-  faHashtag  = faHashtag ;
-  faBriefcase = faBriefcase;
-  faUserTie = faUserTie;
   faListAlt = faListAlt;
+  faUser = faUser;
+  faIdCard = faIdCard;
+  faPhone = faPhone;
 
   propietario : Propietario = new Propietario();
 

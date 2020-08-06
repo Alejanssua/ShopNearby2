@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Tienda } from 'src/app/models/tienda';
 import { TiendaService } from 'src/app/services/tienda.service';
 import { ActivatedRoute } from '@angular/router';
-import { faListAlt, faUser, faFileAlt, faHashtag, faBriefcase, faUserTie  } from '@fortawesome/free-solid-svg-icons';
+import { faListAlt, faClock, faGenderless, faMapMarkerAlt, faPhone, faStore, faIdCard } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-tienda-card',
@@ -11,12 +11,13 @@ import { faListAlt, faUser, faFileAlt, faHashtag, faBriefcase, faUserTie  } from
 })
 export class TiendaCardComponent implements OnInit {
 
-  faUser = faUser;
-  faFileAlt = faFileAlt;
-  faHashtag  = faHashtag ;
-  faBriefcase = faBriefcase;
-  faUserTie = faUserTie;
   faListAlt = faListAlt;
+  faClock = faClock; 
+  faGenderless = faGenderless;
+  faMapMarkerAlt = faMapMarkerAlt;
+  faPhone = faPhone;
+  faStore = faStore;
+  faIdCard = faIdCard;
 
   tienda : Tienda = new Tienda();
 

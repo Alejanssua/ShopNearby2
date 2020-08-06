@@ -32,6 +32,7 @@ import { PropietarioListComponent } from './components/propietario-list/propieta
 import { TiendaCardComponent } from './components/tienda-card/tienda-card.component';
 import { TiendaFormComponent } from './components/tienda-form/tienda-form.component';
 import { TiendaListComponent } from './components/tienda-list/tienda-list.component';
+import { InicioComponent } from './components/inicio/inicio.component';
 
 
 
@@ -57,7 +58,8 @@ import { TiendaListComponent } from './components/tienda-list/tienda-list.compon
     PropietarioListComponent,
     TiendaCardComponent,
     TiendaFormComponent,
-    TiendaListComponent
+    TiendaListComponent,
+    InicioComponent
 
   ],
   imports: [

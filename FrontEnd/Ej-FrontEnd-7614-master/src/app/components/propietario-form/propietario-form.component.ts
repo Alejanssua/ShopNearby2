@@ -3,7 +3,8 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Propietario } from 'src/app/models/propietario';
 import { PropietarioService } from 'src/app/services/propietario.service';
-import { faUser, faFileAlt, faHashtag, faBriefcase, faUserTie, faUserPlus, faSave, faTimes  } from '@fortawesome/free-solid-svg-icons';
+import { faListAlt, faUser, faIdCard, faPhone, faUserPlus, faSave, faTimes } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-propietario-form',
@@ -12,19 +13,18 @@ import { faUser, faFileAlt, faHashtag, faBriefcase, faUserTie, faUserPlus, faSav
 })
 export class PropietarioFormComponent implements OnInit {
 
+  faListAlt = faListAlt;
   faUser = faUser;
-  faFileAlt = faFileAlt;
-  faHashtag  = faHashtag ;
-  faBriefcase = faBriefcase;
-  faUserTie = faUserTie;
-  faUserPlus =faUserPlus;
-  faSave = faSave;
+  faIdCard = faIdCard;
+  faPhone = faPhone;
+  faUserPlus = faUserPlus;
+  faSave =  faSave;
   faTimes = faTimes;
 
   title = "Nuevo registro de propietario";
 
   propietario : Propietario = new Propietario();
-  
+
   @Output() flagToReload = new EventEmitter<Boolean>();
 
   form: FormGroup;
